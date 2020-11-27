@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KitchenBand</title>
+  </head>
+  <body>
+    <!-- LOADING WINDOW -->
+    <div id="modal_bg">
+      <div id="modal">
+        <div>
+          <h3 id="modal_title">KitchenBand</h3>
+        </div>
+        <p id="modal_style">Loading "ROCK"...</p>
+        <div id="myprogress">
+          <div id="mybar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav>
+      <div class="box">
+        <img
+          src="./assets/image/help_outline_black.svg"
+          alt="help_outline"
+          class="help_outline"
+          id="help_outline"
+        />
+        <img
+          src="./assets/image/source_black.svg"
+          alt=""
+          class="folder"
+          id="folder"
+        />
+      </div>
+      <div class="actions">
+        <img src="./assets/image/fast_rewind.svg" alt="rewind" class="rewind" />
+        <img
+          src="./assets/image/fast_forward.svg"
+          alt="forward"
+          class="forward"
+        />
+        <img src="./assets/image/stop.svg" alt="stop" class="stop" />
+        <img src="./assets/image/play_arrow.svg" alt="play" class="play" />
+        <img src="./assets/image/record.svg" alt="record" class="record" />
+      </div>
+      <div class="info">
+        <h2 class="info__title">ROCK</h2>
+        <div class="info__window">
+          <p>TIME:</p>
+          <p class="time"></p>
+          <p>BARS:</p>
+          <p class="bar"></p>
+          <p>TEMPO:</p>
+          <p>100</p>
+        </div>
+      </div>
+    </nav>
+    <!-- MAIN -->
+    <div class="window">
+      <div class="header">
+        <div id="manual" hidden>
+          <h3>Shortcuts:</h3>
+          <p>Spacebar: Play/Pause</p>
+          <p>Escape: Stop</p>
+          <p>Left Arrow: Rewind</p>
+          <p>Right Arrow: Forward</p>
+        </div>
+        <div id="source" hidden>
+          <h2 class="style">ROCK</h2>
+          <h2 class="style">BLUES</h2>
+          <h2 class="style">FUNK</h2>
+          <h2 class="style">JAZZ</h2>
+        </div>
+      </div>
+      <div class="drums">
+        <div class="drums__instrument">
+          <h4 class="title">Drums</h4>
+          <div class="actions">
+            <img
+              src="./assets/image/volume_off.svg"
+              alt="volume_off"
+              class="mute-drums"
+              id="mute"
+            />
+            <img
+              src="./assets/image/headset.svg"
+              alt="headset"
+              class="headset-drums"
+              id="headset"
+            />
+          </div>
+          <input
+            class="volume-slider volume-slider-drums"
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
+        <div class="drums__track"></div>
+      </div>
+      <hr />
+      <div class="bass">
+        <div class="bass__instrument">
+          <h4 class="title">Bass</h4>
+          <div class="actions">
+            <img
+              src="./assets/image/volume_off.svg"
+              alt="volume_off"
+              class="mute-bass"
+              id="mute"
+            />
+            <img
+              src="./assets/image/headset.svg"
+              alt="headset"
+              class="headset-bass"
+              id="headset"
+            />
+          </div>
+          <input
+            class="volume-slider volume-slider-bass"
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
+        <div class="bass__track"></div>
+      </div>
+      <hr />
+      <div class="guitar">
+        <div class="guitar__instrument">
+          <h4 class="title">Guitar</h4>
+          <div class="actions">
+            <img
+              src="./assets/image/volume_off.svg"
+              alt="volume_off"
+              class="mute-guitar"
+              id="mute"
+            />
+            <img
+              src="./assets/image/headset.svg"
+              alt="headset"
+              class="headset-guitar"
+              id="headset"
+            />
+          </div>
+          <input
+            class="volume-slider volume-slider-guitar"
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
+        <div class="guitar__track"></div>
+      </div>
+      <hr />
+      <div class="keyboard">
+        <div class="keyboard__instrument">
+          <h4 class="title">Keyboard</h4>
+          <div class="actions">
+            <img
+              src="./assets/image/volume_off.svg"
+              alt="volume_off"
+              class="mute-keyboard"
+              id="mute"
+            />
+            <img
+              src="./assets/image/headset.svg"
+              alt="headset"
+              class="headset-keyboard"
+              id="headset"
+            />
+          </div>
+          <input
+            class="volume-slider volume-slider-keyboard"
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
+        <div class="keyboard__track"></div>
+      </div>
+      <hr />
+    </div>
+  </body>
+  <script src="./js/app.js" type="module"></script>
+  <script src="./js/modules/instrumentTrack.js" type="module"></script>
+  <script src="./js/modules/actionsOnTrack.js" type="module"></script>
+  <script src="./js/modules/manualAndSource.js" type="module"></script>
+</html>
