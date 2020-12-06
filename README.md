@@ -10,3 +10,8 @@ You can change the volume, solo and mute each track.
 You can choose between 4 different styles: Rock, Blues, Funk and Jazz.
 
 I recorded every instrument for each style by myself.
+
+### How to use the app
+
+Open the index.html file with the LiveServer extension (in VSCode) or any similar extension.
+
