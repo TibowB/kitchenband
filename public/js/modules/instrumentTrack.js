@@ -28,7 +28,7 @@ export class InstrumentTrack {
     });
     // Load sound
     this.instrumentTrack.load(
-      `../assets/sound/${this.style}/${this.style}_${this.instrument}.mp3`
+      `../public/assets/sound/${this.style}/${this.style}_${this.instrument}.mp3`
     );
     // Add the track container to the window
     windowTrack.append(instrumentDiv);
