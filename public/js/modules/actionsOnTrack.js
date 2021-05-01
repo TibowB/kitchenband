@@ -8,10 +8,12 @@ export function playPauseTracks(
   keyboardTrack
 ) {
   // Changing icon
-  if (playButton.getAttribute("src") == "./assets/image/play_arrow.svg") {
-    playButton.setAttribute("src", "./assets/image/pause.svg");
+  if (
+    playButton.getAttribute("src") == "./public/assets/image/play_arrow.svg"
+  ) {
+    playButton.setAttribute("src", "./public/assets/image/pause.svg");
   } else {
-    playButton.setAttribute("src", "./assets/image/play_arrow.svg");
+    playButton.setAttribute("src", "./public/assets/image/play_arrow.svg");
   }
   // Wavesurfer method
   drumsTrack.instrumentTrack.playPause();
@@ -30,7 +32,7 @@ export function stopTracks(
   keyboardTrack
 ) {
   // If tracks have been paused before they're stopped, we make sure to change the icon to the Play icon.
-  playButton.setAttribute("src", "./assets/image/play_arrow.svg");
+  playButton.setAttribute("src", "./public/assets/image/play_arrow.svg");
   drumsTrack.instrumentTrack.stop();
   bassTrack.instrumentTrack.stop();
   keyboardTrack.instrumentTrack.stop();
@@ -47,7 +49,7 @@ export function forwardTracks(
   keyboardTrack
 ) {
   // Same as stopTracks()
-  playButton.setAttribute("src", "./assets/image/play_arrow.svg");
+  playButton.setAttribute("src", "./public/assets/image/play_arrow.svg");
   drumsTrack.instrumentTrack.skipForward();
   bassTrack.instrumentTrack.skipForward();
   keyboardTrack.instrumentTrack.skipForward();
@@ -64,7 +66,7 @@ export function rewindTracks(
   keyboardTrack
 ) {
   // Same as stopTracks()
-  playButton.setAttribute("src", "./assets/image/play_arrow.svg");
+  playButton.setAttribute("src", "./public/assets/image/play_arrow.svg");
   drumsTrack.instrumentTrack.skipBackward();
   bassTrack.instrumentTrack.skipBackward();
   keyboardTrack.instrumentTrack.skipBackward();
