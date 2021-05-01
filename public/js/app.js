@@ -60,8 +60,8 @@ window.addEventListener("load", () => {
 // HELP
 
 const helpButton = document.getElementById("help_outline");
-const linkToBlackHelpIcon = "./assets/image/help_outline_black.svg";
-const linkToWhiteHelpIcon = "./assets/image/help_outline_white.svg";
+const linkToBlackHelpIcon = "./public/assets/image/help_outline_black.svg";
+const linkToWhiteHelpIcon = "./public/assets/image/help_outline_white.svg";
 helpButton.addEventListener("click", () => {
   if (helpButton.getAttribute("src") === linkToBlackHelpIcon) {
     toggleManual();
@@ -75,8 +75,8 @@ helpButton.addEventListener("click", () => {
 // SOURCE
 
 const sourceButton = document.getElementById("folder");
-const linkToBlackFolder = "./assets/image/source_black.svg";
-const linkToWhiteFolder = "./assets/image/source_white.svg";
+const linkToWhiteFolder = "./public/assets/image/source_white.svg";
+const linkToBlackFolder = "./public/assets/image/source_black.svg";
 sourceButton.addEventListener("click", () => {
   if (sourceButton.getAttribute("src") === linkToBlackFolder) {
     toggleSource();
