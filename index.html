@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KitchenBand</title>
   </head>
+  <noscript>Your browser does not support JavaScript!</noscript>
   <body>
-    <!-- LOADING WINDOW -->
     <div id="modal_bg">
       <div id="modal">
         <div>
@@ -24,8 +24,6 @@
         </div>
       </div>
     </div>
-
-    <!-- NAVBAR -->
     <nav>
       <div class="box">
         <img
@@ -64,7 +62,6 @@
         </div>
       </div>
     </nav>
-    <!-- MAIN -->
     <div class="window">
       <div class="header">
         <div id="manual" hidden>
@@ -199,8 +196,8 @@
       <hr />
     </div>
   </body>
-  <script src="./js/app.js" type="module"></script>
-  <script src="./js/modules/instrumentTrack.js" type="module"></script>
-  <script src="./js/modules/actionsOnTrack.js" type="module"></script>
-  <script src="./js/modules/manualAndSource.js" type="module"></script>
+  <script src="./js/app.js" type="module" defer></script>
+  <script src="./js/modules/instrumentTrack.js" type="module" defer></script>
+  <script src="./js/modules/actionsOnTrack.js" type="module" defer></script>
+  <script src="./js/modules/manualAndSource.js" type="module" defer></script>
 </html>
