@@ -16,5 +16,3 @@ I recorded every instrument for each style by myself.
 ---
 
 Open the index.html file with the LiveServer extension (in VSCode) or any similar extension.
-
-Click on ![help_icon](https://thibaultbruggeman.fr/kitchenband/public/assets/image/help_outline_black.svg) to show the keyboard shortcuts and on ![source_icon](https://thibaultbruggeman.fr/kitchenband/public/assets/image/source_black.svg) to change the current style.
