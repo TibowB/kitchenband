@@ -1,0 +1,10 @@
+.control-bar {
+  background-color: #a5a5a5;
+  height: fit-content;
+  display: flex;
+}
+
+.control-bar svg:hover {
+  cursor: pointer;
+}
+

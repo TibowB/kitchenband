@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Varela Round", sans-serif;
+}
+
+.splitter {
+    height: 5vh;
+    width: 100%;
+    background-color: #474747;
+}

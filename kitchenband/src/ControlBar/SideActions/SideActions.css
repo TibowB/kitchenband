@@ -1,0 +1,12 @@
+.side-actions {
+    flex: 1;
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    padding-left: 2vw;
+}
+
+.side-actions svg {
+    margin: 0 1vw;
+    padding: 0.5vh 0.2vw;
+}
