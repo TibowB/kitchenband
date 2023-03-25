@@ -1,18 +1,30 @@
 import ControlBar from "./ControlBar/ControlBar";
-import './App.css'
+import "./App.css";
+import Tracks from "./Tracks/Tracks";
+import { AppContext } from "./AppContext";
+import { useState } from "react";
 
 export default function App() {
-    const controls = {
-        iconSize: 20,
-        musicStyle: 'Rock',
-        time: 0.00.toFixed(2),
-        bars: 0.0.toFixed(1),
-        tempo: 100
-    }
-    return (
-        <>
+  const [action, setAction] = useState('');
+  const [musicStyle, setMusicStyle] = useState("rock")
+  const [timer, setTimer] = useState(0.0)
+
+  const context = {
+    action,
+    setAction,
+    musicStyle,
+    setMusicStyle,
+    timer,
+    setTimer
+  }
+
+  return (
+    <>
+      <AppContext.Provider value={context}>
         <ControlBar />
-        <div className="splitter" ></div>
-        </>
-    )
+        <div className="splitter"></div>
+        <Tracks />
+      </AppContext.Provider>
+    </>
+  );
 }
