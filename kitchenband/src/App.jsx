@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function App() {
   const [action, setAction] = useState('');
-  const [musicStyle, setMusicStyle] = useState("rock")
+  const [musicStyle, setMusicStyle] = useState("ROCK")
   const [timer, setTimer] = useState(0.0)
 
   const context = {

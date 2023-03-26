@@ -14,6 +14,28 @@ export default function TrackActions() {
   const { action, setAction } = useContext(AppContext);
   const size = 25;
 
+  document.addEventListener("keydown", ({ code }) => {
+    if (code == "Space" && action !== "play") {
+      setAction("play")
+    }
+
+    if (code == "Space" && action === "play") {
+      setAction("pause")
+    }
+
+    if (code == "Escape") {
+      setAction("stop")
+    }
+
+    if (code == "ArrowLeft") {
+      setAction("backward")
+    }
+
+    if (code == "ArrowRight") {
+      setAction("forward")
+    }
+  })
+
   return (
     <div className="track-actions">
       <BsFillRewindFill size={size} onClick={() => setAction("backward")}/>
