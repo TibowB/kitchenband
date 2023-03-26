@@ -35,13 +35,14 @@ export default function Track({ instrument }) {
       WaveSurfer.create({
         container: `#${instrument}`,
         waveColor: "#008016",
-        backEnd: "MediaElement",
+        backend: "MediaElement",
         barHeight: 4,
         height: 160,
         responsive: true,
         normalize: true,
         skipLength: 1,
         regionsMinLength: 10,
+        partialRender: true
       })
     );
   }, [musicStyle]);
