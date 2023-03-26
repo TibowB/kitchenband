@@ -6,8 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../AppContext";
 
 export default function Track({ instrument }) {
-  const { action, musicStyle } =
-    useContext(AppContext);
+  const { action, musicStyle } = useContext(AppContext);
   const [waveSurfer, setWaveSurfer] = useState(null);
   const [volume, setVolume] = useState(1);
   const size = 20;
@@ -28,6 +27,10 @@ export default function Track({ instrument }) {
   }
 
   useEffect(() => {
+    if (waveSurfer) {
+      document.querySelector(`#${instrument}`).firstChild.remove();
+    }
+
     setWaveSurfer(
       WaveSurfer.create({
         container: `#${instrument}`,
@@ -41,12 +44,13 @@ export default function Track({ instrument }) {
         regionsMinLength: 10,
       })
     );
-  }, []);
+  }, [musicStyle]);
 
   useEffect(() => {
     if (waveSurfer) {
+      const style = musicStyle.toLowerCase();
       waveSurfer.load(
-        `/samples/${musicStyle}/${musicStyle}_${instrument.toLowerCase()}.mp3`
+        `/samples/${style}/${style}_${instrument.toLowerCase()}.mp3`
       );
     }
   }, [waveSurfer]);
@@ -70,7 +74,7 @@ export default function Track({ instrument }) {
       case "backward":
         waveSurfer.skipBackward();
         break;
-      default: 
+      default:
         return;
     }
   }, [action]);

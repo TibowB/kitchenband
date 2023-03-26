@@ -6,7 +6,7 @@ import Modal from "../../Modal/Modal";
 import { AppContext } from "../../AppContext";
 
 export default function SideActions() {
-  const { setMusicStyle } = useContext(AppContext);
+  const { setMusicStyle, setAction } = useContext(AppContext);
   const [left, setLeft] = useState(0);
   const [top, setTop] = useState(0);
   const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false);
@@ -29,6 +29,12 @@ export default function SideActions() {
   function handleShowMusicStyleSelector(event) {
     setModalPosition(event);
     setShowMusicStyleSelector(!showMusicStyleSelector);
+  }
+
+  function handleStyleSelection(style) {
+    setAction("stop");
+    setShowMusicStyleSelector(!showMusicStyleSelector);
+    setMusicStyle(style);
   }
 
   return (
@@ -59,7 +65,7 @@ export default function SideActions() {
           <Modal top={top} left={left}>
             <div className="styles">
               {musicStyles.map((style, index) => (
-                <h2 key={index} onClick={() => setMusicStyle(style)}>
+                <h2 key={index} onClick={() => handleStyleSelection(style)}>
                   {style}
                 </h2>
               ))}
